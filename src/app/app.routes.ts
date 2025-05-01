@@ -100,12 +100,14 @@ export const routes: Routes = [
       {
         path: 'students/edit/:id',
         loadComponent: () =>
-          import('./components/admin/students/student-form/student-form.component').then(m => m.StudentFormComponent)  
+          import('./components/admin/students/student-form/student-form.component').then(m => m.StudentFormComponent),
+        data: { renderMode: 'ssr' }
       },
       {
         path: 'cours/edit/:id',
         loadComponent: () =>
-          import('./components/admin/cours/cours-form/cours-form.component').then(m => m.CoursFormComponent)
+          import('./components/admin/cours/cours-form/cours-form.component').then(m => m.CoursFormComponent),
+        data: { renderMode: 'ssr' }
       },  
       {
         path: 'profile',

@@ -1,7 +1,7 @@
 [build]
 command = "npm run build:ssr"
 publish = "dist/frontend/browser"
-functions = "dist/frontend/server"
+functions = "dist/frontend/server"  # pour que Netlify cherche le SSR 
 
 [dev]
 command = "npm run dev:ssr"
@@ -13,5 +13,5 @@ command = "npm run dev:ssr"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/.netlify/functions/server"  # pour router toutes les pages via le SSR 
   status = 200
