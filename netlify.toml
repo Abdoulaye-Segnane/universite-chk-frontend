@@ -1,14 +1,14 @@
 [build]
 command = "npm run build:ssr"
-publish = "dist/universite-chk-frontend/browser"
-functions = "dist/universite-chk-frontend/server"
+publish = "dist/frontend/browser"
+functions = "dist/frontend/server"
 
 [dev]
 command = "npm run dev:ssr"
 
 [[redirects]]
   from = "/api/*"
-  to = "https://ton-backend-spring.onrender.com/api/:splat"
+  to = "https://example.com/api/:splat"
   status = 200
 
 [[redirects]]
