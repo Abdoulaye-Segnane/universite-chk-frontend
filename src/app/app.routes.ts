@@ -1,3 +1,4 @@
+import { StudentCoursComponent } from './components/student/student-cours/student-cours.component';
 import { HomeComponent } from './components/user/home/home.component';
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
@@ -42,12 +43,22 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadComponent: () =>
-          import('./components/student/dashboard/dashboard.component').then(m => m.DashboardComponent)
+          import('./components/student/dashboard/dashboard.component').then(m => m.StudentDashboardComponent)
       },
       {
         path: 'logout',
         loadComponent: () =>
           import('./shared/components/logout/logout.component').then(m => m.LogoutComponent)
+      },
+      {
+        path: 'cours/list',
+        loadComponent: () =>
+          import('./components/student/student-cours/student-cours.component').then(m => m.StudentCoursComponent)
+      },
+      {
+        path: 'cours/details/:id',
+        loadComponent: () =>
+          import('./components/student/student-cours/student-cours.component').then(m => m.StudentCoursComponent)
       }
     ]
   }

@@ -1,19 +1,25 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FooterComponent } from "../../../shared/components/footer/footer.component";
-import { NavbarComponent } from "../../../shared/components/navbar/navbar.component";
+import { CommonModule } from '@angular/common';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-student-layout',
-  imports: [CommonModule, RouterOutlet, FooterComponent, NavbarComponent],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
+  ],
   templateUrl: './student-layout.component.html',
-  styleUrl: './student-layout.component.css'
+  styleUrls: ['./student-layout.component.css']
 })
-export class StudentLayoutComponent {
-  // This component serves as a layout for the student section of the application.
-  // It includes a navbar and a footer, and uses Angular's RouterOutlet to display child routes.
-  // The CommonModule is imported to provide common directives like ngIf and ngFor.
-  // The FooterComponent and NavbarComponent are imported to be used in the template.
-  // The RouterOutlet is used to load the appropriate component based on the current route.
-}
+export class StudentLayoutComponent {}

@@ -1,0 +1,30 @@
+h2 {
+  color: #0678BF;
+  margin-bottom: 20px;
+}
+
+mat-card {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.info-card {
+  background: #F2F2F2;
+}
+
+.course-card {
+  background: #E3F2FD;
+  color: #0678BF;
+}
+
+.recent-card {
+  background: #bcf1c7;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}

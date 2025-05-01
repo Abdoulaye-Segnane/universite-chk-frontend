@@ -1,0 +1,26 @@
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 220px;
+    background-color: #0678BF;
+    color: white;
+  }
+  
+  .mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .content {
+    padding: 16px;
+    background-color: #F2F2F2;
+    min-height: calc(100vh - 64px);
+  }
+  
+  .mat-nav-list a {
+    color: white;
+  }
+  

@@ -6,7 +6,7 @@
 .mat-card-title {
   font-size: 24px;
   font-weight: bold;
-  color: #0678BF; /* Ta palette */
+  color: #0678BF; /* Couleur principale */
   margin-bottom: 16px;
 }
 
@@ -39,4 +39,12 @@ table {
 .add-cours-btn {
   margin-top: 24px;
   text-align: right;
+}
+
+mat-icon[color="primary"] {
+  color: #0678BF;
+}
+
+mat-icon[color="warn"] {
+  color: #D97823;
 }

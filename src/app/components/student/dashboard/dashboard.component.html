@@ -1,1 +1,23 @@
-<p>dashboard works!</p>
+<h2>Bonjour, {{ student?.prenom }} {{ student?.nom }} 👋</h2>
+
+<mat-card class="info-card">
+  <h3>Infos personnelles</h3>
+  <p><strong>INE:</strong> {{ student?.ine }}</p>
+  <p><strong>Email:</strong> {{ student?.email }}</p>
+  <p><strong>Formation:</strong> {{ student?.formation || '-' }}</p>
+  <p><strong>Année Bac:</strong> {{ student?.anneeBac }}</p>
+</mat-card>
+
+<mat-card class="course-card">
+  <h3>📘 Cours disponibles</h3>
+  <p>Nombre de cours : <strong>{{ totalCourses }}</strong></p>
+</mat-card>
+
+<mat-card class="recent-card" *ngIf="recentCourses.length">
+  <h3>🗂️ Derniers cours</h3>
+  <ul>
+    <li *ngFor="let c of recentCourses">
+      {{ c.titre }} - {{ c.formateur }} ({{ c.date }})
+    </li>
+  </ul>
+</mat-card>

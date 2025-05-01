@@ -91,7 +91,7 @@ export class StudentFormComponent implements OnInit {
     if (this.editMode) {
       this.studentService.update(this.studentId!, data).subscribe({
         next: (res: ApiResponseModel) => {
-          this.snackBar.open(res.message, 'Fermer', {
+          this.snackBar.open(res.message|| 'Étudiant modifié avec succès !', 'Fermer', {
             duration: 3000,
             verticalPosition: 'top',
             horizontalPosition: 'center'

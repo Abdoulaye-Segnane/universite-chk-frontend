@@ -28,11 +28,11 @@
           <th mat-header-cell *matHeaderCellDef> Actions </th>
           <td mat-cell *matCellDef="let cours">
             <div class="action-buttons">
-              <button mat-icon-button color="primary" (click)="editCours(cours.id)">
-                <mat-icon>edit</mat-icon>
+              <button mat-icon-button (click)="editCours(cours.id)">
+                <mat-icon color="primary">edit</mat-icon>
               </button>
-              <button mat-icon-button color="warn" (click)="deleteCours(cours.id)">
-                <mat-icon>delete</mat-icon>
+              <button mat-icon-button (click)="deleteCours(cours.id)">
+                <mat-icon color="warn">delete</mat-icon>
               </button>
             </div>
           </td>

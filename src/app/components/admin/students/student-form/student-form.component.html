@@ -20,7 +20,7 @@
 
       <div class="form-actions">
         <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
-          Créer l'étudiant
+          {{ editMode ? 'Modifier l’étudiant' : 'Créer l’étudiant' }}
         </button>
         <button mat-stroked-button color="warn" type="button" (click)="onCancel()">
           Annuler
