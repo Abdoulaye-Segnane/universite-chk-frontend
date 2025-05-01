@@ -1,0 +1,53 @@
+<div class="dashboard-content">
+
+  <!-- Statistiques -->
+  <div class="card-container">
+    <mat-card class="stat-card blue">
+      <mat-icon>group</mat-icon>
+      <div class="stat">
+        <h2>{{ studentsCount }}</h2>
+        <p>Étudiants</p>
+      </div>
+    </mat-card>
+
+    <mat-card class="stat-card green">
+      <mat-icon>school</mat-icon>
+      <div class="stat">
+        <h2>{{ coursCount }}</h2>
+        <p>Cours</p>
+      </div>
+    </mat-card>
+  </div>
+
+  <!-- Derniers éléments -->
+  <div class="latest-section">
+    <div class="latest-list">
+      <h3>Derniers étudiants</h3>
+      <ul>
+        <li *ngFor="let s of latestStudents">
+          {{ s.username }} - {{ s.email }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="latest-list">
+      <h3>Derniers cours</h3>
+      <ul>
+        <li *ngFor="let c of latestCours">
+          {{ c.titre }} - {{ c.formateur }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Raccourcis -->
+  <div class="action-buttons">
+    <button mat-raised-button color="primary" [routerLink]="['/admin/students']">
+      <mat-icon>group</mat-icon> Gérer les étudiants
+    </button>
+    <button mat-raised-button color="accent" [routerLink]="['/admin/cours']">
+      <mat-icon>menu_book</mat-icon> Gérer les cours
+    </button>
+  </div>
+
+</div>

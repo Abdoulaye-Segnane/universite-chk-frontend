@@ -1,0 +1,58 @@
+<mat-card class="card-container">
+  <mat-card-title>Liste des étudiants</mat-card-title>
+
+  <mat-card-content>
+    <div class="table-container">
+      <table mat-table [dataSource]="students" class="mat-elevation-z2">
+
+        <!-- Colonne Username -->
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef> Nom d'utilisateur </th>
+          <td mat-cell *matCellDef="let student"> {{ student.username }} </td>
+        </ng-container>
+
+        <!-- Colonne INE -->
+        <ng-container matColumnDef="ine">
+          <th mat-header-cell *matHeaderCellDef> Numéro INE </th>
+          <td mat-cell *matCellDef="let student"> {{ student.ine }} </td>
+        </ng-container>
+
+        <!-- Colonne Email -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let student"> {{ student.email }} </td>
+        </ng-container>
+
+        <!-- Colonne Mot de Passe Initial -->
+        <ng-container matColumnDef="motDePasseInitial">
+          <th mat-header-cell *matHeaderCellDef> Mot de passe </th>
+          <td mat-cell *matCellDef="let student"> {{ student.motDePasseInitial }} </td>
+        </ng-container>
+
+        <!-- Colonne Actions -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let student">
+            <div class="action-buttons">
+              <button mat-icon-button (click)="editStudent(student.id)">
+                <mat-icon color="primary">edit</mat-icon>
+              </button>
+              <button mat-icon-button (click)="deleteStudent(student.id)">
+                <mat-icon color="warn">delete</mat-icon>
+              </button>
+            </div>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <div class="add-student-btn">
+        <button mat-raised-button color="primary" (click)="addStudent()">
+          <mat-icon>person_add</mat-icon> Ajouter un étudiant
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

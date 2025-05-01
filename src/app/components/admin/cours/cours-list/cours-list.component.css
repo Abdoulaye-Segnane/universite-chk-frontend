@@ -1,0 +1,42 @@
+.card-container {
+  margin: 24px;
+  padding: 16px;
+}
+
+.mat-card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0678BF; /* Ta palette */
+  margin-bottom: 16px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mat-header-cell {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.mat-row:hover {
+  background-color: #e3f2fd; /* Hover léger bleu */
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.add-cours-btn {
+  margin-top: 24px;
+  text-align: right;
+}

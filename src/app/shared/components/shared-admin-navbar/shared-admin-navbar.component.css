@@ -1,0 +1,34 @@
+.sidenav {
+  width: 240px;
+  background-color: #003060;
+  color: white;
+}
+
+.sidenav-header {
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #002040;
+  text-align: center;
+}
+
+mat-nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+mat-nav-list a:hover {
+  background-color: #004080;
+}
+
+/* Lien actif */
+.active-link {
+  background-color: #0678BF; /* Couleur que tu m'as donné */
+  font-weight: bold;
+  border-left: 4px solid #17A63B; /* Petit effet sympa */
+}
+
+mat-icon {
+  margin-right: 12px;
+  color: #0678BF;
+}

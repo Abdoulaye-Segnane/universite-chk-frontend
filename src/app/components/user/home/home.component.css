@@ -1,0 +1,75 @@
+.hero {
+    position: relative;
+    height: 63vh;
+    background: url('/img/banner.webp') center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    margin: 0 0 16px;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+  }
+  
+  .hero-content .actions button + button {
+    margin-left: 12px;
+  }
+  
+  .info {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .info h2 {
+    color: #003366;
+    margin-bottom: 12px;
+  }
+  
+  .info p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+  }
+  
+  .footer {
+    background: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: 60vh;
+    }
+  
+    .hero-content h1 {
+      font-size: 2.3rem;
+    }
+  }
+  

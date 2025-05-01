@@ -1,0 +1,35 @@
+<div class="register-wrapper">
+  <div class="register-left">
+    <h2>Création d'étudiant</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nom</mat-label>
+        <input matInput formControlName="nom" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Prénom</mat-label>
+        <input matInput formControlName="prenom" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Année d'obtention du Bac</mat-label>
+        <input matInput type="number" formControlName="anneeBac" required />
+      </mat-form-field>
+
+      <div class="form-actions">
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+          Créer l'étudiant
+        </button>
+        <button mat-stroked-button color="warn" type="button" (click)="onCancel()">
+          Annuler
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="register-right">
+    <img src="/img/studentPage.webp" alt="Création étudiant UN-CHK"/>
+  </div>
+</div>
