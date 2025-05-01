@@ -1,16 +1,32 @@
+import express from 'express';
 import { CommonEngine } from '@angular/ssr/node';
-import { render } from '@netlify/angular-runtime/common-engine';
 
+const app = express();
 const commonEngine = new CommonEngine();
 
-export const reqHandler = async (request: Request, context: any): Promise<Response> => {
-  const pathname = new URL(request.url).pathname;
+app.get('*', async (req, res) => {
+  const pathname = req.path;
+
+  console.log(`Requête reçue pour : ${pathname}`);
 
   // 🔁 Ignore toutes les requêtes API
   if (pathname.startsWith('/api/')) {
-    return new Response(null, { status: 404 });
+    console.log('Requête API ignorée.');
+    res.status(404).send();
+    return;
   }
 
-  // 🌐 Rendu SSR standard
-  return await render(commonEngine);
-};
+  try {
+    // 🌐 Rendu SSR standard
+    const html = await commonEngine.render({
+      url: req.url,
+      document: '<app-root></app-root>',
+    });
+    res.send(html);
+  } catch (error) {
+    console.error('Erreur lors du rendu SSR :', error);
+    res.status(500).send('Erreur interne du serveur');
+  }
+});
+
+export const reqHandler = app;

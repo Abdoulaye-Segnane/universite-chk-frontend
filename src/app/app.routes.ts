@@ -54,11 +54,6 @@ export const routes: Routes = [
         path: 'cours/list',
         loadComponent: () =>
           import('./components/student/student-cours/student-cours.component').then(m => m.StudentCoursComponent)
-      },
-      {
-        path: 'cours/details/:id',
-        loadComponent: () =>
-          import('./components/student/student-cours/student-cours.component').then(m => m.StudentCoursComponent)
       }
     ]
   }
@@ -105,18 +100,13 @@ export const routes: Routes = [
       {
         path: 'students/edit/:id',
         loadComponent: () =>
-          import('./components/admin/students/student-form/student-form.component').then(m => m.StudentFormComponent)
+          import('./components/admin/students/student-form/student-form.component').then(m => m.StudentFormComponent)  
       },
       {
         path: 'cours/edit/:id',
         loadComponent: () =>
           import('./components/admin/cours/cours-form/cours-form.component').then(m => m.CoursFormComponent)
-      },
-      {
-        path: 'profile',
-        loadComponent: () =>
-          import('./components/admin/profile/profile.component').then(m => m.ProfileComponent)
-      },
+      },  
       {
         path: 'profile',
         loadComponent: () =>

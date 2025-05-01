@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "universite-chk-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:frontend": "node dist/frontend/server/server.mjs"
+    "serve:ssr:frontend": "node dist/universite-chk-frontend/server/server.mjs",
+    "build:ssr": "ng build && ng run universite-chk-frontend:server",
+    "dev:ssr": "ng run universite-chk-frontend:serve-ssr",
+    "netlify:dev": "netlify dev"
   },
   "private": true,
   "dependencies": {
