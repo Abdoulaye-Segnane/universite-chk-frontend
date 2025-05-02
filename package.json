@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:ssr": "ng build --output-path=dist/frontend/browser && ng run frontend:server",
+    "build:ssr": "ng build --configuration=development --output-path=dist/frontend/browser",
     "dev:ssr": "node dist/frontend/server/main.js",
     "netlify:build": "npm run build:ssr",
     "netlify:dev": "netlify dev"
@@ -26,6 +26,7 @@
     "@angular/platform-server": "^19.1.0",
     "@angular/router": "^19.1.0",
     "@angular/ssr": "^19.2.10",
+    "@netlify/angular-runtime": "^2.3.1",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
